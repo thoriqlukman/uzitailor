@@ -81,7 +81,7 @@ class Register extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => otp(),
+                            builder: (context) => Login(),
                           ));
                     },
                   ),

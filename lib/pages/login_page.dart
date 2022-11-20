@@ -1,7 +1,12 @@
 part of 'pages.dart';
 
-class Login extends StatelessWidget {
-  const Login({Key? key}) : super(key: key);
+class Login extends StatefulWidget {
+  @override
+  _LoginState createState() => _LoginState();
+}
+
+class _LoginState extends State<Login> {
+  late bool _obscureText = true;
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +52,19 @@ class Login extends StatelessWidget {
                     ),
                     TextFormField(
                       decoration: InputDecoration(
-                          prefixIcon: Icon(Icons.lock), labelText: "Password"),
+                          // suffixIcon: GestureDetector(
+                          //   onTap: () {
+                          //     setState(() {
+                          //       _obscureText = !_obscureText;
+                          //     });
+                          //   },
+                          //   child: Icon(_obscureText
+                          //       ? Icons.visibility
+                          //       : Icons.visibility_off),
+                          // ),
+                          prefixIcon: Icon(Icons.lock),
+                          labelText: "Password"),
+                      obscureText: _obscureText,
                     ),
                   ],
                 ),
@@ -91,7 +108,7 @@ class Login extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => Dashboard(),
+                            builder: (context) => Home(),
                           ));
                     },
                   ),
