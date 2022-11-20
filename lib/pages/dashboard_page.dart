@@ -5,7 +5,6 @@ class Dashboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final formKey = GlobalKey<FormState>();
     return Scaffold(
         backgroundColor: primaryColor,
         body: Center(

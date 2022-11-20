@@ -40,6 +40,7 @@ class Login extends StatelessWidget {
                       decoration: InputDecoration(
                           prefixIcon: Icon(Icons.person),
                           labelText: "Username"),
+                      inputFormatters: [],
                     ),
                     SizedBox(
                       height: 15,
